@@ -21,10 +21,14 @@ code {
     monospace;
 }
 
+textarea {
+  resize: none;
+}
+
 /* Left sidebar */
 
 .leftsidebar {
-  @apply h-full w-56 flex flex-col justify-between;
+  @apply h-full w-56 flex flex-col justify-between col-span-3;
 }
 
 .nav-group {
@@ -48,6 +52,10 @@ hover:bg-twitter-el-gray
 
 .logout {
   @apply flex justify-between items-center
-  rounded-3xl px-4 relative right-4 ml-2 my-4 py-3
+  rounded-3xl ml-2 px-4 relative right-4 my-4 py-3
   transition-all;
+}
+
+.icon-bg-blue-hover {
+  @apply hover:bg-twitter-icon-hover-bg transition-all;
 }

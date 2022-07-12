@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react'
-import cat from '../assets/cat.webp'
 import dots from '../assets/dots.svg'
+import ProfilePicture from './ProfilePicture'
 
 function Logout() {
   const [logoutOptions, setLogoutOptions] = useState(false)
@@ -18,7 +18,7 @@ function Logout() {
       }`}
     >
       <div className="flex justify-center items-center">
-        <img src={cat} alt="Profile" className="w-10 h-10 rounded-full" />
+        <ProfilePicture size="10" />
         <div className="pl-3">
           <p className="font-semibold">Name</p>
           <p className="text-sm text-twitter-dark-gray">@Username</p>
