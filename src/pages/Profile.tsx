@@ -1,5 +1,5 @@
 import { useEffect, useState } from 'react'
-import { Link, NavLink } from 'react-router-dom'
+import { Link, NavLink, useNavigate } from 'react-router-dom'
 import backIcon from '../assets/back-icon.svg'
 import cat from '../assets/cat.webp'
 import dateIcon from '../assets/date-icon.svg'
@@ -19,17 +19,23 @@ function Profile() {
     setActiveProfileNav(num)
   }
 
+  let navigate = useNavigate()
+
+  function goBack() {
+    navigate(-1)
+  }
+
   return (
     <div className="middle">
       {/* Topmost */}
       <div className="flex items-center sticky top-0 bg-twitter-eel-gray z-20">
-        <Link to="/">
+        <div onClick={goBack}>
           <img
             src={backIcon}
             alt="Back"
             className="cursor-pointer ml-4 w-4 h-4"
           />
-        </Link>
+        </div>
         <div className="px-6 pb-2">
           <p className="font-bold text-xl">Username</p>
           <p className="text-xs text-twitter-dark-gray">44 tweets</p>

@@ -4,6 +4,7 @@ import RightSidebar from './components/RightSidebar'
 import './index.css'
 import Home from './pages/Home'
 import Profile from './pages/Profile'
+import TweetDetails from './pages/TweetDetails'
 
 function App() {
   return (
@@ -15,6 +16,7 @@ function App() {
           <Routes>
             <Route path="/" element={<Home />} />
             <Route path="/profile" element={<Profile />} />
+            <Route path="/:username/:tweetid" element={<TweetDetails />} />
           </Routes>
 
           <RightSidebar />
