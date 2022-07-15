@@ -3,6 +3,7 @@ import { Link, NavLink, useNavigate } from 'react-router-dom'
 import backIcon from '../assets/back-icon.svg'
 import cat from '../assets/cat.webp'
 import dateIcon from '../assets/date-icon.svg'
+import PageHeader from '../components/PageHeader'
 import TweetCard from '../components/TweetCard'
 
 function Profile() {
@@ -28,19 +29,21 @@ function Profile() {
   return (
     <div className="middle">
       {/* Topmost */}
-      <div className="flex items-center sticky top-0 bg-twitter-eel-gray z-20">
-        <div onClick={goBack}>
-          <img
-            src={backIcon}
-            alt="Back"
-            className="cursor-pointer ml-4 w-4 h-4"
-          />
+      <PageHeader>
+        <div className="flex items-center">
+          <div onClick={goBack}>
+            <img
+              src={backIcon}
+              alt="Back"
+              className="cursor-pointer ml-4 w-4 h-4"
+            />
+          </div>
+          <div className="px-6 pb-2">
+            <p className="font-bold text-xl">Username</p>
+            <p className="text-xs text-twitter-dark-gray">44 tweets</p>
+          </div>
         </div>
-        <div className="px-6 pb-2">
-          <p className="font-bold text-xl">Username</p>
-          <p className="text-xs text-twitter-dark-gray">44 tweets</p>
-        </div>
-      </div>
+      </PageHeader>
 
       {/* Background image */}
       <div className="h-64">
@@ -134,12 +137,24 @@ function Profile() {
       <div>
         {activeProfileNav === 1 && (
           <div>
-            <TweetCard />
-            <TweetCard />
-            <TweetCard />
-            <TweetCard />
-            <TweetCard />
-            <TweetCard />
+            <Link to="/username/1">
+              <TweetCard />
+            </Link>
+            <Link to="/username/2">
+              <TweetCard />
+            </Link>
+            <Link to="/username/3">
+              <TweetCard />
+            </Link>
+            <Link to="/username/4">
+              <TweetCard />
+            </Link>
+            <Link to="/username/5">
+              <TweetCard />
+            </Link>
+            <Link to="/username/6">
+              <TweetCard />
+            </Link>
           </div>
         )}
       </div>

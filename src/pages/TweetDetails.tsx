@@ -9,6 +9,7 @@ import backIcon from '../assets/back-icon.svg'
 import { Link, useNavigate } from 'react-router-dom'
 import TweetShare from '../components/TweetShare'
 import Reply from '../components/Reply'
+import PageHeader from '../components/PageHeader'
 
 function TweetDetails() {
   let navigate = useNavigate()
@@ -20,18 +21,20 @@ function TweetDetails() {
   return (
     <div className="middle">
       {/* Topmost */}
-      <div className="flex items-center sticky top-0 bg-twitter-eel-gray z-20">
-        <div onClick={goBack}>
-          <img
-            src={backIcon}
-            alt="Back"
-            className="cursor-pointer ml-4 w-4 h-4"
-          />
+      <PageHeader>
+        <div className="flex items-center">
+          <div onClick={goBack}>
+            <img
+              src={backIcon}
+              alt="Back"
+              className="cursor-pointer ml-4 w-4 h-4"
+            />
+          </div>
+          <div className="px-6 pb-2">
+            <p className="font-bold text-xl">Tweet</p>
+          </div>
         </div>
-        <div className="px-6 pb-2">
-          <p className="font-bold text-xl">Tweet</p>
-        </div>
-      </div>
+      </PageHeader>
 
       <div className="flex flex-col w-full px-5 py-2 lg:py-6">
         {/* Username and pic */}
@@ -146,7 +149,6 @@ function TweetDetails() {
         <Reply />
         <Reply />
         <Reply />
-
         <Reply />
         <Reply />
         <Reply />
