@@ -9,7 +9,7 @@ function App() {
   return (
     <div>
       <BrowserRouter>
-        <div className="grid grid-cols-12 mx-24 pt-4 h-screen">
+        <div className="grid grid-cols-12 mx-0 lg:mx-24 just pt-2 lg:pt-4 h-screen">
           <LeftSidebar />
 
           <Routes>

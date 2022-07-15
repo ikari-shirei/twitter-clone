@@ -3,7 +3,7 @@
 @tailwind utilities;
 
 html {
-  @apply bg-twitter-eel-gray;
+  @apply bg-twitter-eel-gray text-twitter-black;
 }
 
 body {
@@ -28,7 +28,29 @@ textarea {
 /* Left sidebar */
 
 .leftsidebar {
-  @apply h-full w-56 flex flex-col justify-between col-span-3;
+  @apply h-full w-56 
+  hidden
+  lg:flex flex-col justify-between
+  md:col-start-1 md:col-end-3 md:col-span-3;
+}
+
+.middle {
+  @apply w-full overflow-y-auto 
+  col-span-12
+  lg:col-span-6 lg:col-start-4 lg:col-end-10;
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+.middle::-webkit-scrollbar {
+  display: none;
+}
+
+.rightsidebar {
+  @apply h-full w-full
+  lg:flex flex-col justify-between
+  pl-8 hidden
+  lg:col-start-10 lg:col-end-13;
 }
 
 .nav-group {
@@ -58,4 +80,10 @@ hover:bg-twitter-el-gray
 
 .icon-bg-blue-hover {
   @apply hover:bg-twitter-icon-hover-bg transition-all;
+}
+
+/* Profile */
+
+.profile-nav-active {
+  @apply font-bold text-twitter-black;
 }

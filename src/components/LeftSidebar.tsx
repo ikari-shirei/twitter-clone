@@ -48,7 +48,7 @@ function LeftSidebar() {
   }, [location])
 
   return (
-    <div className="leftsidebar fixed">
+    <div className="leftsidebar">
       {/* Upper sidebar */}
       <div>
         {/* Logo */}

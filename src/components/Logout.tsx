@@ -18,7 +18,7 @@ function Logout() {
       }`}
     >
       <div className="flex justify-center items-center">
-        <ProfilePicture size="10" />
+        <ProfilePicture className="w-10 h-10" />
         <div className="pl-3">
           <p className="font-semibold">Name</p>
           <p className="text-sm text-twitter-dark-gray">@Username</p>

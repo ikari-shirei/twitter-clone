@@ -5,9 +5,9 @@ import TweetShare from '../components/TweetShare'
 
 function Home() {
   return (
-    <div className="w-full col-span-6 col-start-4 col-end-10">
+    <div className="middle">
       {/* Sort type */}
-      <div className="flex justify-between items-center sticky bg-twitter-eel-gray">
+      <div className="flex justify-between items-center sticky top-0 pb-4 pl-6 pr-4 bg-twitter-eel-gray z-20">
         <p className="text-xl font-bold cursor-pointer">Latest tweets</p>
         <img src={latestIcon} alt="Latest icon" className="cursor-pointer" />
       </div>

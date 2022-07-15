@@ -8,21 +8,29 @@ import shareIcon from '../assets/share-icon.svg'
 
 function TweetCard() {
   return (
-    <div className="flex pr-5 pl-5 relative right-5 py-6 border hover:bg-twitter-card-hover-bg transition-all cursor-pointer">
-      <ProfilePicture size="12" />
-      <div className="ml-4">
+    <div className="flex px-5 lg:relative lg:right-5 py-2 lg:py-6 border hover:bg-twitter-card-hover-bg transition-all cursor-pointer">
+      <ProfilePicture className="w-12 h-12" />
+      <div className="ml-2 lg:ml-4">
         {/* Username, date, options */}
         <div className="flex justify-between items-center">
           <div className="flex items-baseline">
-            <p className="font-semibold">Usernameverylong</p>
-            <p className="text-twitter-dark-gray ml-2">@Usernamelong</p>
-            <p className="text-twitter-dark-gray ml-2">5m</p>
+            <p className="font-semibold text-sm lg:text-base">
+              Usernameverylong
+            </p>
+            <p className="text-twitter-dark-gray ml-2 text-xs lg:text-sm">
+              @Usernamelong
+            </p>
+            <p className="text-twitter-dark-gray ml-2 text-xs lg:text-sm">5m</p>
           </div>
-          <img src={dotsIcon} alt="More" className="cursor-pointer py-2" />
+          <img
+            src={dotsIcon}
+            alt="More"
+            className="cursor-pointer my-2 w-4 h-4"
+          />
         </div>
 
         {/* Tweet body */}
-        <p className="text-md">
+        <p className="text-sm lg:text-base tracking-tight">
           Lorem Ipsum is simply dummy text of the printing and typesetting
           industry. Lorem Ipsum has been the industry's standard dummy text ever
           since the 1500s, when an unknown printer took a galley of type and

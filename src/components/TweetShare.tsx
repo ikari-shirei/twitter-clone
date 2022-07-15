@@ -6,9 +6,8 @@ function TweetShare() {
   return (
     <div className="flex my-4">
       {/* Profile pic */}
-      <div className="flex">
-        <ProfilePicture size="12" />
-      </div>
+
+      <ProfilePicture className="w-12 h-12 ml-2" />
 
       {/* Input, tweet button and image adding */}
       <div className="w-full px-4 ">
