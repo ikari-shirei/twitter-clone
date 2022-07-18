@@ -31,7 +31,7 @@ function TweetDetails() {
             />
           </div>
           <div className="px-6 pb-2">
-            <p className="font-bold text-xl">Tweet</p>
+            <p className="pageHeaderBold">Tweet</p>
           </div>
         </div>
       </PageHeader>

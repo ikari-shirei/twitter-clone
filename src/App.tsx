@@ -5,6 +5,7 @@ import RightSidebar from './components/RightSidebar'
 import './index.css'
 import Bookmarks from './pages/Bookmarks'
 import Home from './pages/Home'
+import Notifications from './pages/Notifications'
 import Profile from './pages/Profile'
 import TweetDetails from './pages/TweetDetails'
 
@@ -23,6 +24,7 @@ function App() {
               <Route path="/profile" element={<Profile />} />
               <Route path="/:username/:tweetid" element={<TweetDetails />} />
               <Route path="/bookmarks" element={<Bookmarks />} />
+              <Route path="/notifications" element={<Notifications />} />
             </Routes>
 
             <RightSidebar />

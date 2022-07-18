@@ -11,7 +11,7 @@ function Home() {
       {/* Sort type */}
       <PageHeader>
         <div className="flex justify-between items-center">
-          <p className="text-xl font-bold cursor-pointer">Latest tweets</p>
+          <p className="pageHeaderBold">Latest tweets</p>
           <img src={latestIcon} alt="Latest icon" className="cursor-pointer" />
         </div>
       </PageHeader>

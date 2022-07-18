@@ -25,6 +25,8 @@ textarea {
   resize: none;
 }
 
+/* General */
+
 .leftsidebar {
   @apply h-full w-56 
   hidden
@@ -49,6 +51,10 @@ textarea {
   lg:flex flex-col justify-between
   pl-8 hidden
   lg:col-start-10 lg:col-end-13;
+}
+
+.pageHeaderBold {
+  @apply font-bold text-xl cursor-pointer;
 }
 
 /* Left sidebar */

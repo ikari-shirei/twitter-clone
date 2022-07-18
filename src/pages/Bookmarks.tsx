@@ -7,7 +7,7 @@ function Bookmarks() {
     <div className="middle">
       <PageHeader>
         <div className="flex flex-col ">
-          <p className="text-xl font-bold cursor-pointer">Bookmarks</p>
+          <p className="pageHeaderBold">Bookmarks</p>
           <p className="text-sm text-twitter-dark-gray ">@username</p>
         </div>
       </PageHeader>

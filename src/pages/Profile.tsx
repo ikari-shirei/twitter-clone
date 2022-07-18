@@ -39,7 +39,7 @@ function Profile() {
             />
           </div>
           <div className="px-6 pb-2">
-            <p className="font-bold text-xl">Username</p>
+            <p className="pageHeaderBold">Username</p>
             <p className="text-xs text-twitter-dark-gray">44 tweets</p>
           </div>
         </div>
