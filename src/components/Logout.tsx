@@ -19,7 +19,7 @@ function Logout() {
     >
       <div className="flex justify-center items-center">
         <ProfilePicture className="w-10 h-10" />
-        <div className="pl-3">
+        <div className="pl-3 hidden lg:inline">
           <p className="font-semibold">Name</p>
           <p className="text-sm text-twitter-dark-gray">@Username</p>
         </div>
@@ -27,7 +27,7 @@ function Logout() {
       <img
         src={dots}
         alt="More"
-        className="py-3"
+        className="py-3 hidden lg:inline"
         onClick={() => setLogoutOptions((prev) => !prev)}
       />
 

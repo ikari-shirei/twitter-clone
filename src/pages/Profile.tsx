@@ -32,13 +32,9 @@ function Profile() {
       <PageHeader>
         <div className="flex items-center">
           <div onClick={goBack}>
-            <img
-              src={backIcon}
-              alt="Back"
-              className="cursor-pointer ml-4 w-4 h-4"
-            />
+            <img src={backIcon} alt="Back" className="cursor-pointer w-4 h-4" />
           </div>
-          <div className="px-6 pb-2">
+          <div className="px-6">
             <p className="pageHeaderBold">Username</p>
             <p className="text-xs text-twitter-dark-gray">44 tweets</p>
           </div>
@@ -52,11 +48,12 @@ function Profile() {
         </div>
 
         {/* Profile image and edit button */}
-        <div className="flex justify-between relative bottom-16 px-8">
+        <div className="flex justify-between relative bottom-10 lg:bottom-16 px-8">
           <img
             src={cat}
             alt="cat"
-            className="cursor-pointer w-32 h-32 rounded-full border border-twitter-eel-gray"
+            className="cursor-pointer w-24 h-24 lg:w-32 lg:h-32 rounded-full border 
+            border-twitter-eel-gray"
           />
           <button className="mt-20 px-4 h-10 rounded-full font-semibold border border-twitter-el-gray">
             Edit profile

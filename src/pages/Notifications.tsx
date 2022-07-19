@@ -10,7 +10,7 @@ function Notifications() {
   }
 
   return (
-    <div className="middle mb-16">
+    <div className="middle px-4 lg:px-0">
       <PageHeader>
         <div>
           <p className="pageHeaderBold">Notifications</p>

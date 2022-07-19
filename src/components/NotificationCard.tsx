@@ -7,7 +7,7 @@ import ProfilePicture from './ProfilePicture'
 
 function NotificationCard({ notiType }: any) {
   return (
-    <div>
+    <div className="pr-8">
       {/* Follower */}
       <div className="flex items-start justify-start mb-4">
         <img src={followerIcon} alt="Follower" className="w-7 h-7" />

@@ -11,7 +11,7 @@ function Messages() {
   return (
     <div className="messages">
       {/* Messages */}
-      <div className="col-start-1 col-end-5 border-r border-twitter-el-gray h-screen overflow-hidden">
+      <div className="col-start-1 col-end-13 lg:col-start-1 lg:col-end-5 border-r border-twitter-el-gray h-screen overflow-hidden">
         {/* When empty */}
         {isMessagesEmpty && (
           <div>
@@ -34,7 +34,7 @@ function Messages() {
 
         {/* If messages exist */}
         {!isMessagesEmpty && (
-          <div className="h-screen border-r border-twitter-el-gray overflow-y-scroll">
+          <div className="h-screen border-r border-twitter-el-gray overflow-y-scroll px-4 lg:px-0">
             {/* Header */}
             <PageHeader>
               <p className="pageHeaderBold">Messages</p>
@@ -57,7 +57,7 @@ function Messages() {
         )}
       </div>
       {/* Direct messages */}
-      <div className="col-start-5 col-end-13 h-full">
+      <div className="col-start-1 col-end-13 lg:col-start-5 lg:col-end-13 h-full">
         {/* When empty */}
         {isMessagesEmpty && (
           <PageHeader>

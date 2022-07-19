@@ -28,8 +28,12 @@ textarea {
 /* General */
 
 .leftsidebar {
-  @apply h-full w-56 
+  @apply h-full w-fit lg:w-56 
   hidden
+  sm:flex
+  sm:mx-4
+  col-span-1
+  col-start-1 col-end-2
   lg:flex flex-col justify-between
   md:col-start-1 md:col-end-3 md:col-span-3;
 }
@@ -37,6 +41,7 @@ textarea {
 .middle {
   @apply w-full overflow-y-auto 
   col-span-12
+  sm:col-span-10
   lg:col-span-6 lg:col-start-4 lg:col-end-10;
   -ms-overflow-style: none;
   scrollbar-width: none;
@@ -76,11 +81,11 @@ hover:bg-twitter-el-gray
 }
 
 .icon-header {
-  @apply ml-4 font-medium;
+  @apply ml-4 font-medium hidden lg:flex;
 }
 
 .icon-header-active {
-  @apply ml-4 font-bold;
+  @apply ml-4 font-bold hidden lg:flex;
 }
 
 .logout {
@@ -104,6 +109,7 @@ hover:bg-twitter-el-gray
 .messages {
   @apply w-full overflow-y-auto 
   col-span-12
+  sm:col-span-10
   lg:col-span-9 lg:col-start-4 lg:col-end-13
   grid grid-cols-12;
 

@@ -62,14 +62,18 @@ function LeftSidebar() {
       <div>
         {/* Logo */}
         <Link to="/">
-          <img src={logo} alt="Twitter logo" className="h-7 w-7 ml-2" />
+          <img
+            src={logo}
+            alt="Twitter logo"
+            className="h-7 w-7 hidden md:inline"
+          />
         </Link>
 
         {/* Navigation */}
         <nav className="mt-4">
           <NavLink to="/">
             <div className="nav-group">
-              <img src={homeIconState} alt="Home" className="nav-icon " />
+              <img src={homeIconState} alt="Home" className="nav-icon" />
               <h1
                 className={`text-xl ${
                   location.pathname === '/'
@@ -86,7 +90,7 @@ function LeftSidebar() {
               <img
                 src={notificationsIconState}
                 alt="Notifications"
-                className="nav-icon "
+                className="nav-icon"
               />
               <h1
                 className={`text-xl ${
@@ -159,7 +163,7 @@ function LeftSidebar() {
         </nav>
 
         {/* Tweet button */}
-        <button className="button-blue mt-4">Tweet</button>
+        <button className="button-blue mt-4 hidden lg:inline">Tweet</button>
       </div>
       {/* Lower navigation */}
       <div>
