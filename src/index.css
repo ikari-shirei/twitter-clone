@@ -57,6 +57,11 @@ textarea {
   @apply font-bold text-xl cursor-pointer;
 }
 
+.button-blue {
+  @apply font-bold text-lg bg-twitter-blue text-twitter-eel-gray
+  rounded-3xl px-4 py-3 w-full;
+}
+
 /* Left sidebar */
 
 .nav-group {
@@ -92,4 +97,20 @@ hover:bg-twitter-el-gray
 
 .profile-nav-active {
   @apply font-bold text-twitter-black;
+}
+
+/* Messages */
+
+.messages {
+  @apply w-full overflow-y-auto 
+  col-span-12
+  lg:col-span-9 lg:col-start-4 lg:col-end-13
+  grid grid-cols-12;
+
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+.messages::-webkit-scrollbar {
+  display: none;
 }

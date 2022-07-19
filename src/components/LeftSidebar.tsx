@@ -8,16 +8,20 @@ import homeIcon from '../assets/home-icon.svg'
 import homeActiveIcon from '../assets/home-icon-active.svg'
 import notificationsIcon from '../assets/notifications-icon.svg'
 import notificationsActiveIcon from '../assets/notifications-icon-active.svg'
+import messagesIcon from '../assets/messages-icon.svg'
+import messagesActiveIcon from '../assets/messages-icon-active.svg'
 import bookmarksIcon from '../assets/bookmark-icon.svg'
 import bookmarksActiveIcon from '../assets/bookmark-icon-active.svg'
 import profileIcon from '../assets/profile-icon.svg'
 import profileActiveIcon from '../assets/profile-icon-active.svg'
+
 import moreIcon from '../assets/more-icon.svg'
 
 function LeftSidebar() {
   const [homeIconState, setHomeIconState] = useState(homeIcon)
   const [notificationsIconState, setNotificationsIconState] =
     useState(notificationsIcon)
+  const [messagesIconState, setMessagesIconState] = useState(messagesIcon)
   const [bookmarkIconState, setBookmarkIconState] = useState(bookmarksIcon)
   const [profileIconState, setProfileIconState] = useState(profileIcon)
 
@@ -45,6 +49,11 @@ function LeftSidebar() {
     location.pathname === '/profile'
       ? setProfileIconState(profileActiveIcon)
       : setProfileIconState(profileIcon)
+
+    // Profile
+    location.pathname === '/messages'
+      ? setMessagesIconState(messagesActiveIcon)
+      : setMessagesIconState(messagesIcon)
   }, [location])
 
   return (
@@ -90,6 +99,24 @@ function LeftSidebar() {
               </h1>
             </div>
           </NavLink>
+          <NavLink to="/messages">
+            <div className="nav-group">
+              <img
+                src={messagesIconState}
+                alt="Message"
+                className="nav-icon "
+              />
+              <h1
+                className={`text-xl ${
+                  location.pathname === '/messages'
+                    ? 'icon-header-active'
+                    : 'icon-header'
+                }`}
+              >
+                Messages
+              </h1>
+            </div>
+          </NavLink>
           <NavLink to="/bookmarks">
             <div className="nav-group">
               <img
@@ -132,9 +159,7 @@ function LeftSidebar() {
         </nav>
 
         {/* Tweet button */}
-        <button className="font-bold text-lg bg-twitter-blue text-twitter-eel-gray rounded-3xl px-4 py-3 mt-4 w-full">
-          Tweet
-        </button>
+        <button className="button-blue mt-4">Tweet</button>
       </div>
       {/* Lower navigation */}
       <div>
